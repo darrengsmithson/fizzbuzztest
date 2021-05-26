@@ -21,6 +21,7 @@ public class AppRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         if (args.length != 3) {
+            System.out.println("3 numerical parameters are required.");
             return;
         }
 

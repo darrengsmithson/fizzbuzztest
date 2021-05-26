@@ -28,11 +28,11 @@ public class AppRunner implements CommandLineRunner {
         FizzBuzzChecker checker = new FizzBuzzChecker();
         List<String> argList = Arrays.stream(args).sequential().collect(Collectors.toList());
         try {
-            int arg1 = Integer.parseInt(argList.get(0));
-            int arg2 = Integer.parseInt(argList.get(1));
-            int arg3 = Integer.parseInt(argList.get(2));
+            int fizzNumber = Integer.parseInt(argList.get(0));
+            int buzzNumber = Integer.parseInt(argList.get(1));
+            int lines = Integer.parseInt(argList.get(2));
 
-            checker.replaceNumbers(arg1, arg2, arg3);
+            checker.replaceNumbers(fizzNumber, buzzNumber, lines);
 
         } catch (NumberFormatException nfe) {
             return;

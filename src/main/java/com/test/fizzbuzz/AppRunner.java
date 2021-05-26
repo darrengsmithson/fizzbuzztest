@@ -16,7 +16,7 @@ public class AppRunner implements CommandLineRunner {
      * Accepts 3 arguments from the command line to be given
      * to FizzBuzzChecker class to print output to the terminal
      *
-     * Rteurns zero output if 3 parameters arent given or the
+     * Returns zero output if 3 parameters arent given or the
      * parameters are not numbers
      */
     @Override

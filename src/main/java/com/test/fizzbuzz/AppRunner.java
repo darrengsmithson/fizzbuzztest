@@ -26,7 +26,7 @@ public class AppRunner implements CommandLineRunner {
         }
 
         FizzBuzzChecker checker = new FizzBuzzChecker();
-        List<String> argList = Arrays.stream(args).sequential().collect(Collectors.toList());
+        List<String> argList = Arrays.asList(args);
         try {
             int fizzNumber = Integer.parseInt(argList.get(0));
             int buzzNumber = Integer.parseInt(argList.get(1));

@@ -40,10 +40,12 @@ public class FizzBuzzChecker {
             return false;
         }
 
+        //If current number is divisible by criteria return true
         if(currentNumber%criteria==0) {
             return true;
         }
 
+        //If current number is contains criteria return true
         return charCheck(currentNumber, criteria);
     }
 

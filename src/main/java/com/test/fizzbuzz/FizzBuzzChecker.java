@@ -2,30 +2,49 @@ package com.test.fizzbuzz;
 
 public class FizzBuzzChecker {
 
-    public void replaceNumbers(int fizz, int buzz, int total) {
-        for(int a=0; a<=total; a++) {
-            if (numberCheck(a, fizz)&&numberCheck(a, buzz)) {
+    /**
+     *
+     * @param fizz a number that will be replaced by 'Fizz'
+     * @param buzz a number that will be replaced by 'Buzz'
+     * @param lines number of lines to be output by the terminal
+     *
+     * Check each line number of the given lines and call a
+     * method that will replace the given parameters with
+     * either Fizz, Buzz or FizzBuzz when the are divisible by
+     * or present in the line number
+     *
+     */
+    public void replaceNumbers(int fizz, int buzz, int lines) {
+        for(int lineNumber=0; lineNumber<=lines; lineNumber++) {
+            if (numberCheck(lineNumber, fizz)&&numberCheck(lineNumber, buzz)) {
                 System.out.println(FizzBuzz.FizzBuzz);
-            }else if(numberCheck(a, fizz)) {
+            }else if(numberCheck(lineNumber, fizz)) {
                 System.out.println(FizzBuzz.Fizz);
-            }else if(numberCheck(a, buzz)) {
+            }else if(numberCheck(lineNumber, buzz)) {
                 System.out.println(FizzBuzz.Buzz);
             }else {
-                System.out.println(a);
+                System.out.println(lineNumber);
             }
         }
     }
 
-    public boolean numberCheck(int currentNumber, int textSwap) {
-        if(currentNumber<textSwap) {
+    /**
+     *
+     * @param currentNumber
+     * @param criteria
+     * @return true if number is divisible by or present in
+     * the criteria number
+     */
+    public boolean numberCheck(int currentNumber, int criteria) {
+        if(currentNumber<criteria) {
             return false;
         }
 
-        if(currentNumber%textSwap==0) {
+        if(currentNumber%criteria==0) {
             return true;
         }
 
-        return charCheck(currentNumber, textSwap);
+        return charCheck(currentNumber, criteria);
     }
 
     private boolean charCheck(int a, int b) {

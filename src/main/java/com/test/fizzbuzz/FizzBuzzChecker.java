@@ -1,5 +1,7 @@
 package com.test.fizzbuzz;
 
+import java.util.stream.IntStream;
+
 public class FizzBuzzChecker {
 
     /**
@@ -15,17 +17,21 @@ public class FizzBuzzChecker {
      *
      */
     public void replaceNumbers(int fizz, int buzz, int lines) {
-        for(int lineNumber=0; lineNumber<=lines; lineNumber++) {
-            if (criteriaCheck(lineNumber, fizz) && criteriaCheck(lineNumber, buzz)) {
-                System.out.println(FizzBuzz.FizzBuzz);
-            }else if(criteriaCheck(lineNumber, fizz)) {
-                System.out.println(FizzBuzz.Fizz);
-            }else if(criteriaCheck(lineNumber, buzz)) {
-                System.out.println(FizzBuzz.Buzz);
-            }else {
-                System.out.println(lineNumber);
-            }
-        }
+
+        IntStream.rangeClosed(1, lines)
+                .forEach(
+                    a -> {
+                        if ( criteriaCheck(a, fizz) && criteriaCheck(a, buzz) ) {
+                            System.out.println(FizzBuzz.FizzBuzz);
+                        }else if( criteriaCheck(a, fizz) ) {
+                            System.out.println(FizzBuzz.Fizz);
+                        }else if( criteriaCheck(a, buzz) ) {
+                            System.out.println(FizzBuzz.Buzz);
+                        }else {
+                            System.out.println(a);
+                        }
+                    }
+                    );
     }
 
     /**

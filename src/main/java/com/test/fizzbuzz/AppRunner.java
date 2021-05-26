@@ -21,7 +21,7 @@ public class AppRunner implements CommandLineRunner {
      */
     @Override
     public void run(String... args) {
-        if(args.length!=3) {
+        if(args.length != 3) {
             return;
         }
 
@@ -35,6 +35,9 @@ public class AppRunner implements CommandLineRunner {
             checker.replaceNumbers(fizzNumber, buzzNumber, lines);
 
         } catch (NumberFormatException nfe) {
+            //Could create a business exception but will print to the
+            //terminal for the initial test phase.
+            System.out.println("Please ensure all arguments are numerical.");
             return;
         }
 

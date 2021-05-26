@@ -1,4 +1,4 @@
-# fizzbuzztest
+# fizzbuzz test
 After the files have been downloaded, run `mvn test` to run the tests and then `mvn install` to create a jar in the target directory.
 
 When the jar has been created `fizzbuzz-0.0.1-SNAPSHOT.jar` use the command line to execute the program with the required parameters.

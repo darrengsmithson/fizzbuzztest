@@ -9,12 +9,12 @@ public class FizzBuzzCheckerTest {
     final FizzBuzzChecker fbChecker = new FizzBuzzChecker();
 
     @Test
-    void lessThanNumberCheckTest() {
+    void lessThanCriteriaNumberCheckTest() {
         assertFalse(fbChecker.numberCheck(1,2));
     }
 
     @Test
-    void noFizzBuzzCheckTest() {
+    void notDivisibleByOrNumberPresentCheckTest() {
         assertFalse(fbChecker.numberCheck(7,3));
     }
 
@@ -24,7 +24,7 @@ public class FizzBuzzCheckerTest {
     }
 
     @Test
-    void modulusNumberCheckTest() {
+    void divisibleByNumberCheckTest() {
         assertTrue(fbChecker.numberCheck(33,3));
         assertTrue(fbChecker.numberCheck(99,3));
     }

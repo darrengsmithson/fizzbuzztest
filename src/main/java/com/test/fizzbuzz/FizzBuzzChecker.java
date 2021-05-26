@@ -52,7 +52,8 @@ public class FizzBuzzChecker {
     private boolean charCheck(int a, int b) {
         String stra = Integer.toString(a, 10);
         char charb = Character.forDigit(b, 10);
-
+        //If String representation of int a doesnt contain char version
+        //of int b return false
         return stra.indexOf(charb)!=-1;
 
     }

@@ -42,12 +42,12 @@ public class FizzBuzzChecker {
      * the criteria number
      */
     public boolean criteriaCheck(int currentNumber, int criteria) {
-        if(currentNumber<criteria) {
+        if(currentNumber < criteria) {
             return false;
         }
 
         //If current number is divisible by criteria return true
-        if(currentNumber%criteria==0) {
+        if(currentNumber % criteria == 0) {
             return true;
         }
 
@@ -60,7 +60,7 @@ public class FizzBuzzChecker {
         char charb = Character.forDigit(b, 10);
         //If String representation of int a doesnt contain char version
         //of int b return false
-        return stra.indexOf(charb)!=-1;
+        return stra.indexOf(charb) != -1;
 
     }
 }

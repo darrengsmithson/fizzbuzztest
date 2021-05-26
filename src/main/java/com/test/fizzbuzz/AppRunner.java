@@ -20,7 +20,7 @@ public class AppRunner implements CommandLineRunner {
      */
     @Override
     public void run(String... args) {
-        if(args.length != 3) {
+        if (args.length != 3) {
             return;
         }
 

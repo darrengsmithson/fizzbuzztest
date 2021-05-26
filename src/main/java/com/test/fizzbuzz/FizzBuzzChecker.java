@@ -45,7 +45,7 @@ public class FizzBuzzChecker {
             return true;
         }
 
-        //If current number is contains criteria return true
+        //If current number contains criteria return true
         return charCheck(currentNumber, criteria);
     }
 

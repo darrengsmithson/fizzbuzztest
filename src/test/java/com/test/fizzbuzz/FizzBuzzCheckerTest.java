@@ -6,32 +6,32 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FizzBuzzCheckerTest {
 
-    final FizzBuzzChecker fbChecker = new FizzBuzzChecker();
+    final FizzBuzzChecker fizzBuzzChecker = new FizzBuzzChecker();
 
     @Test
     void lessThanCriteriaNumberCheckTest() {
-        assertFalse(fbChecker.numberCheck(1,2));
+        assertFalse(fizzBuzzChecker.criteriaCheck(1,2));
     }
 
     @Test
     void notDivisibleByOrNumberPresentCheckTest() {
-        assertFalse(fbChecker.numberCheck(7,3));
+        assertFalse(fizzBuzzChecker.criteriaCheck(7,3));
     }
 
     @Test
     void sameNumberCheckTest() {
-        assertTrue(fbChecker.numberCheck(3,3));
+        assertTrue(fizzBuzzChecker.criteriaCheck(3,3));
     }
 
     @Test
     void divisibleByNumberCheckTest() {
-        assertTrue(fbChecker.numberCheck(33,3));
-        assertTrue(fbChecker.numberCheck(99,3));
+        assertTrue(fizzBuzzChecker.criteriaCheck(33,3));
+        assertTrue(fizzBuzzChecker.criteriaCheck(99,3));
     }
 
     @Test
     void numberPresentCheckTest() {
-        assertTrue(fbChecker.numberCheck(13,3));
+        assertTrue(fizzBuzzChecker.criteriaCheck(13,3));
     }
 
 }

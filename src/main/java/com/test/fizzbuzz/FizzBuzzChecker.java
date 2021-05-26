@@ -16,11 +16,11 @@ public class FizzBuzzChecker {
      */
     public void replaceNumbers(int fizz, int buzz, int lines) {
         for(int lineNumber=0; lineNumber<=lines; lineNumber++) {
-            if (numberCheck(lineNumber, fizz)&&numberCheck(lineNumber, buzz)) {
+            if (criteriaCheck(lineNumber, fizz) && criteriaCheck(lineNumber, buzz)) {
                 System.out.println(FizzBuzz.FizzBuzz);
-            }else if(numberCheck(lineNumber, fizz)) {
+            }else if(criteriaCheck(lineNumber, fizz)) {
                 System.out.println(FizzBuzz.Fizz);
-            }else if(numberCheck(lineNumber, buzz)) {
+            }else if(criteriaCheck(lineNumber, buzz)) {
                 System.out.println(FizzBuzz.Buzz);
             }else {
                 System.out.println(lineNumber);
@@ -35,7 +35,7 @@ public class FizzBuzzChecker {
      * @return true if number is divisible by or present in
      * the criteria number
      */
-    public boolean numberCheck(int currentNumber, int criteria) {
+    public boolean criteriaCheck(int currentNumber, int criteria) {
         if(currentNumber<criteria) {
             return false;
         }

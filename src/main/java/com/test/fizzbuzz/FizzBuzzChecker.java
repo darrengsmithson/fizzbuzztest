@@ -18,17 +18,16 @@ public class FizzBuzzChecker {
      */
     public void replaceNumbers(int fizz, int buzz, int lines) {
 
-        IntStream.rangeClosed(1, lines)
-                .forEach(
-                    a -> {
-                        if ( criteriaCheck(a, fizz) && criteriaCheck(a, buzz) ) {
+        IntStream.rangeClosed(1, lines).forEach(
+                    line -> {
+                        if ( criteriaCheck(line, fizz) && criteriaCheck(line, buzz) ) {
                             System.out.println(FizzBuzz.FizzBuzz);
-                        }else if( criteriaCheck(a, fizz) ) {
+                        }else if( criteriaCheck(line, fizz) ) {
                             System.out.println(FizzBuzz.Fizz);
-                        }else if( criteriaCheck(a, buzz) ) {
+                        }else if( criteriaCheck(line, buzz) ) {
                             System.out.println(FizzBuzz.Buzz);
                         }else {
-                            System.out.println(a);
+                            System.out.println(line);
                         }
                     }
                     );
